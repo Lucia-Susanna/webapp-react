@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="row row-cols-3">
+      <div className="row row-cols-3 ">
         <MovieCard movies={movies} />
       </div>
     </>
