@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import StarRating from "./StarRating"
 const MovieCard = ({ movies }) => {
 
   return (
@@ -11,7 +11,8 @@ const MovieCard = ({ movies }) => {
             <h5 className="my-3" >{movie.title}</h5>
             <div>{movie.genre}</div>
             <i>Directed by: {movie.director} ({movie.release_year})</i>
-            <div>{movie.abstract}</div>
+            <div className="my-2">{movie.abstract}</div>
+            {movie.avg_vote && <StarRating vote={movie.avg_vote} />}
             <Link to={`movie/${movie.id}`} className="btn btn-primary my-3"> Mostra dettagli</Link>
           </div>
         </div>
