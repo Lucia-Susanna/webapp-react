@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../contexts/GlobalContext"
 import { useEffect } from "react"
-import MovieCard from "../../components/MovieCard"
+import MovieCard from "../components/MovieCard"
 
 const HomePage = () => {
 
