@@ -12,7 +12,6 @@ const HomePage = () => {
 
   return (
     <>
-      <h1 className='text-center text-primary'>Bool-Movies</h1>
       <div className="row row-cols-3">
         <MovieCard movies={movies} />
       </div>
