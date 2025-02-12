@@ -1,7 +1,10 @@
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import { useGlobalContext } from "../contexts/GlobalContext"
+
 import ReviewCard from "../components/ReviewCard"
+import ReviewForm from "../components/ReviewForm"
+
 import { Link } from "react-router-dom"
 const Detail = () => {
 
@@ -26,10 +29,18 @@ const Detail = () => {
           <p>{movie?.abstract}</p>
         </div>
       </section>
+
       <section>
         {movie?.reviews && renderReviews()}
       </section>
-      <Link to={'/'} className="btn btn-primary my-4">Torna all'elenco</Link>
+
+      <section>
+        <ReviewForm movie_id={movie?.id} fetchData={movieDetail} />
+      </section>
+
+      <section>
+        <Link to={'/'} className="btn btn-primary my-4">Torna all'elenco</Link>
+      </section>
     </>
   )
 }

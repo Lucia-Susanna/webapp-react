@@ -4,7 +4,7 @@ const ReviewCard = ({ review }) => {
   return (
     <div className="card p-3 my-3">
       <i>"{text}"</i>
-      <p>{name}</p>
+      <p className="fw-light my-2">- {name}</p>
       <StarRating vote={vote} />
     </div>
   )
